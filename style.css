@@ -1,0 +1,370 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f9faff;
+  color: #333;
+  line-height: 1.6;
+}
+header {
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+header h1 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  margin: 0;
+}
+.cor {
+  color: #ffdd57;
+}
+nav {
+  display: flex;
+  gap: 3rem;
+}
+nav a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #ffdd57;
+}
+.banner {
+  position: relative;
+  width: 100%;
+  height: 510px;
+  overflow: hidden;
+}
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+main {
+  max-width: 1000px;
+  margin: 2rem auto 4rem auto;
+  padding: 0 1rem;
+}
+section {
+  margin-bottom: 4rem;
+}
+h2.section-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #2575fc;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+h2.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #6a11cb;
+  margin: 0.5rem auto 0 auto;
+  border-radius: 2px;
+}
+.services-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.service-card {
+  background: white;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  max-width: 280px;
+  padding: 1.8rem 1.5rem;
+  margin: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+.service-card h3 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #2575fc;
+}
+.service-card p {
+  font-weight: 300;
+  font-size: 1rem;
+}
+.features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.feature-item {
+  max-width: 320px;
+  background: #e9f0ff;
+  padding: 1.2rem 1rem;
+  border-radius: 8px;
+  margin: 1rem;
+  font-weight: 500;
+  color: #4a67ff;
+}
+.pricing {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.pricing-plan {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem 2rem 3rem 2rem;
+  margin: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 280px;
+  text-align: center;
+  position: relative;
+}
+.pricing-plan.popular {
+  border: 3px solid #6a11cb;
+  box-shadow: 0 12px 30px rgba(106, 17, 203, 0.4);
+}
+.pricing-plan h3 {
+  font-weight: 700;
+  color: #6a11cb;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+.price {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2575fc;
+  margin: 1rem 0 1.5rem 0;
+}
+.pricing-plan ul {
+  list-style: none;
+  margin-bottom: 1.5rem;
+  color: #555;
+  font-weight: 400;
+}
+.pricing-plan ul li {
+  margin-bottom: 0.6rem;
+}
+.btn-select {
+  background: #6a11cb;
+  color: white;
+  font-weight: 600;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.btn-select:hover {
+  background: #2575fc;
+}
+.testimonials {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.testimonial-item {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem 3rem;
+  margin-bottom: 2rem;
+  font-style: italic;
+  position: relative;
+}
+.testimonial-item::before {
+  content: "“";
+  font-size: 4rem;
+  color: #6a11cb;
+  position: absolute;
+  top: 10px;
+  left: 15px;
+}
+.testimonial-author {
+  margin-top: 1rem;
+  font-weight: 600;
+  text-align: right;
+  color: #2575fc;
+  font-style: normal;
+}
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+form .form-group {
+  margin-bottom: 1.5rem;
+}
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #444;
+}
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: 1.8px solid #ddd;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  resize: vertical;
+}
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+  border-color: #6a11cb;
+  outline: none;
+}
+form button {
+  background: #2575fc;
+  color: white;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+form button:hover {
+  background: #6a11cb;
+}
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 12px;
+  padding: 2rem;
+}
+.about-image {
+  flex: 1;
+  max-width: 400px;
+}
+.about-image img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.about-text {
+  flex: 1;
+}
+.about-text h3 {
+  font-weight: 600;
+  font-size: 2rem;
+  color: #6a11cb;
+  margin-bottom: 1rem;
+}
+.about-text p {
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: #555;
+}
+.vision-mission-container {
+  border-radius: 12px;
+  padding: 2rem;
+}
+.vision-mission-container h3 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #6a11cb;
+  margin-bottom: 0.8rem;
+}
+
+.vision-mission-container p {
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+footer {
+  background: #222;
+  color: #aaa;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+}
+footer a {
+  color: #6a11cb;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+footer a:hover {
+  color: #2575fc;
+}
+@media (max-width: 768px) {
+  .services-list,
+  .features,
+  .pricing {
+    flex-direction: column;
+    align-items: center;
+  }
+  .service-card,
+  .feature-item,
+  .pricing-plan {
+    max-width: 90%;
+  }
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  nav {
+    margin-top: 0.5rem;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  nav a {
+    margin: 0 0.5rem;
+  }
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  .about-image {
+    max-width: 100%;
+  }
+  .about-image img {
+    height: 300px;
+  }
+  .about-text h3 {
+    font-size: 1.8rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .vision-mission-container h3 {
+    font-size: 1.6rem;
+  }
+
+  .vision-mission-container p {
+    font-size: 1rem;
+  }
+}

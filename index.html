@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Professional Service Provider</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Brit <span class="cor">Jasa</span></h1>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="tentang.html">Tentang Kami</a>
+    <a href="layanan.html">Layanan</a>
+    <a href="blog.html">Blog</a>
+  </nav>
+</header>
+<div class="banner">
+  <img src="britch.png" alt="banner">
+</div>
+<main>
+  <section id="services">
+    <h2 class="section-title">Layanan Kami</h2>
+    <div class="services-list">
+      <div class="service-card">
+        <h3>Konsultasi</h3>
+        <p>Nasihat ahli untuk mengoptimalkan proses dan strategi bisnis Anda.</p>
+      </div>
+      <div class="service-card">
+        <h3>Digital Marketing</h3>
+        <p>Tingkatkan kehadiran online Anda dengan solusi pemasaran berbasis data.</p>
+      </div>
+      <div class="service-card">
+        <h3>Web Development</h3>
+        <p>Situs web kustom yang responsif disesuaikan dengan kebutuhan bisnis Anda.</p>
+      </div>
+    </div>
+  </section>
+  <section id="features">
+    <h2 class="section-title">Mengapa Memilih Kami</h2>
+    <div class="features">
+      <div class="feature-item">Profesional Berpengalaman dengan sukses yang terbukti</div>
+      <div class="feature-item">Pendekatan Berorientasi Pelanggan untuk memenuhi kebutuhan Anda yang tepat</div>
+      <div class="feature-item">Harga Terjangkau tanpa mengorbankan kualitas</div>
+    </div>
+  </section>
+  <section id="pricing">
+    <h2 class="section-title">Rencana Harga</h2>
+    <div class="pricing">
+      <div class="pricing-plan">
+        <h3>Pemula</h3>
+        <div class="price">Rp 150.000</div>
+        <ul>
+          <li>Konsultasi Awal</li>
+          <li>Laporan Analitik Dasar</li>
+          <li>Dukungan Email</li>
+        </ul>
+        <button class="btn-select">Pilih Rencana</button>
+      </div>
+      <div class="pricing-plan popular">
+        <h3>Standar</h3>
+        <div class="price">Rp 230.000</div>
+        <ul>
+          <li>Semua Fitur Dasar</li>
+          <li>Pengembangan Strategi Kustom</li>
+          <li>Dukungan Prioritas</li>
+          <li>Laporan Kemajuan Bulanan</li>
+        </ul>
+        <button class="btn-select">Pilih Rencana</button>
+      </div>
+      <div class="pricing-plan">
+        <h3>Premium</h3>
+        <div class="price">Rp 400.000</div>
+        <ul>
+          <li>Semua Fitur Standar</li>
+          <li>Pengembangan Website Lengkap</li>
+          <li>Manajer Akun Khusus</li>
+          <li>Dukungan 24/7</li>
+        </ul>
+        <button class="btn-select">Pilih Rencana</button>
+      </div>
+    </div>
+  </section>
+  <section id="testimonials">
+    <h2 class="section-title">Apa yang Dikatakan Klien Kami</h2>
+    <div class="testimonials">
+      <div class="testimonial-item">
+        "BrightPath Solutions mengubah keberadaan online kami. Tim mereka sangat berpengetahuan dan responsif."
+        <div class="testimonial-author">- Sarah M.</div>
+      </div>
+      <div class="testimonial-item">
+        "Layanan konsultasi mereka membantu memperlancar proses kami dan secara signifikan meningkatkan pendapatan."
+        <div class="testimonial-author">- Adit T.</div>
+      </div>
+    </div>
+  </section>
+  <section id="contact">
+    <h2 class="section-title">Hubungi Kami</h2>
+    <form id="contactForm" novalidate>
+      <div class="form-group">
+        <label for="name">Name *</label>
+        <input type="text" id="name" name="name" placeholder="Nama Lengkap" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" placeholder="example@domain.com" required />
+      </div>
+      <div class="form-group">
+        <label for="message">Pesan *</label>
+        <textarea id="message" name="message" rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
+      </div>
+      <button type="submit">Kirim</button>
+      <p id="formMessage" style="margin-top: 1rem; font-weight: 600;"></p>
+    </form>
+  </section>
+</main>
+<footer>
+  <p>© 2024 Brit Jasa.</p>
+  <p>
+    Follow
+    <a href="#" aria-label="Facebook">Facebook</a> |
+    <a href="#" aria-label="Twitter">Twitter</a> |
+    <a href="#" aria-label="LinkedIn">LinkedIn</a>
+  </p>
+</footer>
+<script>
+  const form = document.getElementById('contactForm');
+  const formMessage = document.getElementById('formMessage');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    formMessage.style.color = 'red';
+
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const message = form.message.value.trim();
+
+    if (!name || !email || !message) {
+      formMessage.textContent = 'Please fill in all required fields.';
+      return;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      formMessage.textContent = 'Please enter a valid email address.';
+      return;
+    }
+
+    formMessage.style.color = 'green';
+    formMessage.textContent = 'Thank you for contacting us! We will get back to you soon.';
+    form.reset();
+  });
+</script>
+</body>
+</html>
